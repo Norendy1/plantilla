@@ -23,6 +23,34 @@
 					var resta=n1-n2;
 					$("#res").val(resta);
 				});
+				$("#btnMultiplicacion").click(function(){
+					var n1=parseInt($("#num1").val());
+					var n2=parseInt($("#num2").val());
+					var multiplicacion=n1*n2;
+					$("#res").val(multiplicacion);
+				});
+
+				$("#btnDivision").click(function(){
+					var n1=parseInt($("#num1").val());
+					var n2=parseInt($("#num2").val());
+					var division=n1/n2;
+					$("#res").val(division);
+				});
+
+				$("#btnFactorial").click(function(){
+					var n5=parseInt($("#num3").val());
+					var Fact1=0;
+					var Fact2=1;
+					Fact1=n5;
+					while (Fact1 !=0){
+						Fact2*=Fact1;
+						Fact1 --;
+						var res1=Fact2;
+					$("#res1").val(res1);
+				
+}
+				});
+
 			});
 	</script>
 	<style type="text/css">
@@ -37,12 +65,12 @@
 			background-color: blue;
 		}
 
-		#Contacto{
+		#Datos{
 
 			background-color: red;
 		}
 	.colorVerde{/*Seleccionar clase*/
-		color: blue;
+		color: white;
 		font-size: 20px;
 		 }
 
@@ -57,28 +85,40 @@
 			<a href="https://www.google.com" class="ui-btn ui-icon-search ui-btn-icon-bottom">Buscar</a>
 		</div>
 		<div data-role="content">
-			<a href="#Contacto" data-role="button" data-transition="slide">Contacto slide</a>
-			<a href="#Contacto" data-role="button" data-transition="slideup">Contacto slideup</a>
-			<a href="#Contacto" data-role="button" data-transition="slidedown">Contacto slidedown</a>
-			<a href="#Contacto" data-role="button" data-transition="flip">Contacto flip</a>
+			<a href="#Operaciones" data-role="button" data-transition="slide">Operaciones Basicas</a>
+			<a href="#Factorial" data-role="button" data-transition="slideup">Factorial</a>
+			<a href="#Datos" data-role="button" data-transition="slidedown">Datos del desarrollador</a>
+			<!--a href="#Contacto" data-role="button" data-transition="flip">Contacto flip</a>
 			<a href="#Contacto" data-role="button" data-transition="fade">Contacto fade</a>
 			<a href="#Contacto" data-role="button" data-transition="pop">Contacto pop</a>
 			<a href="#Contacto" data-role="button" data-transition="flow">Contacto flow</a>
 			<a href="#Contacto" data-role="button" data-transition="slidefade">Contacto slidefade</a>
 			<a href="#Contacto" data-role="button" data-transition="turn">Contacto turn</a>
-			<a href="#Suma" data-role="button" data-transition="flip">Realizar suma</a>
+			<a href="#Suma" data-role="button" data-transition="flip">Realizar suma</a-->
 		</div>
-		<div data-role="footer">
+		<!--div data-role="footer">
 			<a href="http://facebook.com" class="ui-btn ui-icon-plus ui-btn-icon-left">Facebook</a>
 			<a href="http://twitter.com" class="ui-btn ui-icon-plus ui-btn-icon-left">Twitter</a>
 			<a href="http://instagram.com" class="ui-btn ui-icon-plus ui-btn-icon-left">Instagram</a>
-			<p></p> <!--referencia un parrafo-->
+			<p></p> <!referencia un parrafo-->
 		</div>
-	</div>
-	<div data-role="page" id="Contacto" data-theme="b"> <!--Segunda interfaz-->
+	<div data-role="page" id="Datos" data-theme="b"> <!--Segunda interfaz-->
 		<div data-role="header">
 		<a href="#Principal" class="ui-btn ui-icon-home ui-btn-icon-top">home</a>
-			<p class="colorVerde">Contacto</p>
+			<p class="colorVerde">Datos del desarrollador</p>
+		</div>
+		<div data-role="header">
+			<div data-role="navbar">
+			<ul>
+				<li><a class="ui-btn ui-icon-home ui btn-icon-top" href="#Principal">Home</a></li>
+				<li><a class="ui-btn ui-icon-plus ui-btn-icon-top" href="#Contacto">Contacto</a></li>
+				<li><a class="ui-btn ui-icon-plus ui-btn-icon-top" href="http:www.google.com"></a>
+				
+				<li><a href="#Datos"></a></li>
+				<li><a href="http://www.google.com">Buscar</a></li>
+				</ul>
+
+			</div>	
 		</div>
 		<div data-role="content">
 			<p>Norendy Abigail Lopez Bravo</p>
@@ -88,18 +128,18 @@
 			<p>Pie de la app</p>
 		</div>
 	</div>
-	<div data-role="page" id="Suma" data-theme="b"> <!--Tercera interfaz-->
-		<!--div data-role="header">
-			<p>Sumar 2 números</p>
-		</div-->
-
-		<div data-role="header">
+		
+	
+	
+	<div data-role="page" id="Operaciones" data-theme="c"> 
+	<div data-role="header">
 			<div data-role="navbar">
 			<ul>
 				<li><a class="ui-btn ui-icon-home ui btn-icon-top" href="#Principal">Home</a></li>
 				<li><a class="ui-btn ui-icon-plus ui-btn-icon-top" href="#Contacto">Contacto</a></li>
 				<li><a class="ui-btn ui-icon-plus ui-btn-icon-top" href="http:www.google.com"></a>
-				<li><a href="#Contacto"></a></li>
+				
+				<li><a href="#Datos"></a></li>
 				<li><a href="http://www.google.com">Buscar</a></li>
 				</ul>
 
@@ -111,10 +151,35 @@
 			<input type="text" id="res" placeholder="Resultado">
 			<input type="button" id="btnSumar" value="Calcular suma">
 			<input type="button" id="btnResta" value="Calcular resta">
+			<input type="button" id="btnMultiplicacion" value="Calcular multiplicacion">
+			<input type="button" id="btnDivision" value="Calcular division">
+		
 		</div>
-		<div data-role="footer">
-			<p>Pie de la app</p>
+
+		
 		</div>
-	</div>
+
+
+		<div data-role="page" id="Factorial" data-theme="c"> <!--Tercera interfaz-->
+		<div data-role="header">
+			<div data-role="navbar">
+			<ul>
+				<li><a class="ui-btn ui-icon-home ui btn-icon-top" href="#Principal">Home</a></li>
+				<li><a class="ui-btn ui-icon-plus ui-btn-icon-top" href="#Contacto">Contacto</a></li>
+				<li><a class="ui-btn ui-icon-plus ui-btn-icon-top" href="http:www.google.com"></a>
+				
+				<li><a href="#Datos"></a></li>
+				<li><a href="http://www.google.com">Buscar</a></li>
+				</ul>
+
+			</div>	
+		</div-->
+	<div data-role="content">
+			<input type="text" id="num3" placeholder="Escribe un número">
+			<input type="text" id="res1" placeholder="Resultado">
+			<input type="button" id="btnFactorial" value="Calcular Factorial">
+			</div>
+
+		</div>
 </body>
 </html>
